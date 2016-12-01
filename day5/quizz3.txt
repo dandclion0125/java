@@ -1,0 +1,81 @@
+import java.util.*;
+
+
+
+public class Quizz3 {
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		Random ran = new Random();
+
+		// 임의의 숫자 3개를 저장할 배열
+		
+		int[] numbers = new int[3];
+		
+		int position = 0; // 숫자를 대입할때 마다 하나씩 증가
+
+		for (; ; ) {
+			int number = ran.nextInt(10);
+			boolean isExist = false;
+			for (int i=0;i<=position ; i++) {
+				if (numbers[i] == number) {
+					isExist = true;
+				}
+			}
+			if (!isExist) { // isExist 가 false일 경우 true가 되어 실행문 실행
+				numbers[position] = number;
+				position++;
+			}
+			if (position == 3) { 
+				break;
+			}
+			
+		}
+		System.out.println(Arrays.toString(numbers));
+		
+		
+		// 사용자가 입력한 답을 저장할 배열
+		int[] answer = new int[3];
+		
+		boolean isSuccess = false;
+
+		//이중 for문으로 해서 numbers 와 answer를 비교
+		// 자리가 같으면 스트라이크를 증가시키고 자리는 다르고 숫자가 같으면 볼을 증가시킨다.
+		
+		for (int a=1; a<=10; a++) {
+			int strike = 0;
+			int ball = 0;
+
+			
+
+			
+			// 작성위치
+			
+			
+			
+			
+			
+			
+			if (strike == 3) {
+				isSuccess = true;
+				break;
+			}
+
+
+
+		}
+
+		if (isSuccess) {
+			System.out.println("성공");
+		} else {
+			System.out.println("멍청이");
+		}
+		
+		
+
+		
+
+       
+
+	}
+}
